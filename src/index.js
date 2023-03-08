@@ -2,12 +2,52 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import HomePage from './components/HomePage/HomePage';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider, Route, createRoutesFromElements } from 'react-router-dom'
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const HOCRoute = ({ element, path }) => {
+  return <>
+    <Header />
+    {element}
+    <Footer />
+  </>
+
+}
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="/" element={
+        <HOCRoute element={<HomePage />} />
+      } />
+      <Route path="/re" element={
+        <HOCRoute element={<App />} />
+      } />
+    </>
+  )
+);
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App />,
+//     // loader: rootLoader,
+//     children: [
+//       {
+//         path: "team",
+//         element: <HomePage />,
+//         // loader: teamLoader,
+//       },
+//     ],
+//   },
+// ], {
+//   basename: '/'
+// });
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

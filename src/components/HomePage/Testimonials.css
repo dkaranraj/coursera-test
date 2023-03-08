@@ -1,0 +1,24 @@
+.testimonials-wrapper > h3{
+  text-align: center;
+}
+.testimonials-wrapper .ratings {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  gap:1rem;
+  justify-content: center;
+}
+.testimonials-wrapper .ratings .rating-item {
+  background-color: rgba(0, 0, 0, 0.342);
+  padding: 1rem;
+  border-radius: 8px;
+}
+.testimonials-wrapper .ratings .rating-item > div {
+  display: flex;
+  gap: 1rem;
+}
+.testimonials-wrapper .ratings .rating-item > div img {
+  width: 100%;
+  max-width: 100px;
+  border-radius: 8px;
+}

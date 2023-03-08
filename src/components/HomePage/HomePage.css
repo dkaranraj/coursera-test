@@ -1,0 +1,33 @@
+.homepage {
+  margin: 8px;
+  padding: 8px;
+}
+.homepage .panel {
+  padding: 1rem;
+}
+.homepage .panel:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.342);
+}
+
+.homepage .hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage .hero-section .left-panel, .homepage .hero-section .right-panel {
+  width: 30%;
+  max-width: 50vw;
+}
+
+.homepage .hero-section .left-panel, .homepage .hero-section .right-panel img {
+  max-width: 500px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.homepage .highlights-section {
+  text-align: right;
+  padding: 1rem;
+}

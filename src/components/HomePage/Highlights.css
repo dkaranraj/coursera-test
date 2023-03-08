@@ -1,0 +1,26 @@
+.highlights-wrapper {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: 1rem;
+}
+.highlights-wrapper .highlight-item {
+  flex: 1;
+  max-width: 300px;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.342);
+  border-radius: 8px;
+}
+.highlights-wrapper .highlight-item img{
+  max-width: 100%;
+  height: 200px;
+  border-radius: 8px;
+}
+.highlights-wrapper .highlight-item .content > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.highlights-wrapper .highlight-item .content > div > span {
+  color: orange;
+}
